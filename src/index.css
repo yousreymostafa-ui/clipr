@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --teal:        #2a9d8f;
+  --teal-light:  #3ab5a6;
+  --teal-dim:    #2a9d8f22;
+  --teal-border: #2a9d8f40;
+  --mint:        #e8f5f4;
+  --mint-deep:   #d0edea;
+
+  --bg:          #f4f7f6;
+  --surface:     #ffffff;
+  --surface2:    #f0f4f3;
+  --border:      #e2ecea;
+  --border2:     #ccd8d6;
+
+  --text1:       #1a2e2b;
+  --text2:       #4a6b66;
+  --text3:       #8aa8a3;
+
+  --danger:      #e05252;
+  --gold:        #f4a425;
+  --success:     #2a9d8f;
+
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
+
+  --shadow:      0 2px 12px rgba(42,157,143,0.08);
+  --shadow-lg:   0 8px 32px rgba(42,157,143,0.14);
+}
+
+[data-theme="dark"] {
+  --bg:          #0f1614;
+  --surface:     #182320;
+  --surface2:    #1e2e2a;
+  --border:      #243530;
+  --border2:     #2e4540;
+
+  --text1:       #e8f5f4;
+  --text2:       #7ab5ae;
+  --text3:       #4a7a74;
+
+  --mint:        #1a2e2b;
+  --mint-deep:   #1e3530;
+  --shadow:      0 2px 12px rgba(0,0,0,0.3);
+  --shadow-lg:   0 8px 32px rgba(0,0,0,0.4);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text1);
+  transition: background 0.3s, color 0.3s;
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+}
+
+#root {
+  height: 100vh;
+  height: 100dvh;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--teal-border); border-radius: 3px; }
+
+input, textarea, select, button {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text1);
+}
+
+input::placeholder, textarea::placeholder { color: var(--text3); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ping { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(2.5); opacity: 0; } }
