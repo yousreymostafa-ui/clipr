@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
+
+:root {
+  --teal: #2a9d8f;
+  --teal-dim: rgba(42,157,143,.1);
+  --teal-border: rgba(42,157,143,.25);
+  --teal-grad: linear-gradient(135deg,#0c95a3,#00c77f);
+  --mint: #e8f5f4;
+
+  /* Gradient backgrounds — very light */
+  --bg: #ffffff;
+  --bg-grad: linear-gradient(160deg, #f0faf9 0%, #ffffff 45%, #fafffe 100%);
+  --surface: rgba(247,249,248,0.9);
+  --surface2: #edf0ef;
+  --surface3: #e2e9e7;
+
+  --border-card: rgba(0,0,0,.06);
+  --border2: rgba(0,0,0,.11);
+  --text1: #111918;
+  --text2: #486662;
+  --text3: #90aeaa;
+  --danger: #e03c31;
+  --gold: #f59e0b;
+  --shadow: 0 2px 14px rgba(42,157,143,.08);
+  --radius: 14px;
+  --radius-lg: 18px;
+
+  /* Frosted glass layers */
+  --glass-hd: rgba(255,255,255,.82);
+  --glass-bar: rgba(255,255,255,.88);
+  --glass-tab: rgba(255,255,255,.75);
+}
+
+[data-theme="dark"] {
+  --bg: #0d1412;
+  --bg-grad: linear-gradient(160deg, #0d1614 0%, #111614 50%, #0e1815 100%);
+  --surface: rgba(23,34,32,.92);
+  --surface2: #1c2d29;
+  --surface3: #243a35;
+  --border-card: rgba(255,255,255,.07);
+  --border2: rgba(255,255,255,.12);
+  --text1: #dff0ec;
+  --text2: #68a49e;
+  --text3: #3a6b64;
+  --teal-dim: rgba(42,157,143,.13);
+  --teal-border: rgba(42,157,143,.22);
+  --mint: #192e2b;
+  --glass-hd: rgba(13,22,20,.82);
+  --glass-bar: rgba(11,18,16,.9);
+  --glass-tab: rgba(13,22,20,.75);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-grad);
+  color: var(--text1);
+  overflow: hidden;
+}
+
+#root { height: 100vh; height: 100dvh; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: var(--teal-border); border-radius: 3px; }
+* { scrollbar-width: thin; scrollbar-color: var(--teal-border) transparent; }
+
+input, textarea, select, button { font-family: 'DM Sans', sans-serif; }
+input::placeholder, textarea::placeholder { color: var(--text3); }
+
+/* Animations */
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes cardIn  { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
+@keyframes slideUp { from { opacity:0; transform:translateY(100%); } to { opacity:1; transform:translateY(0); } }
+@keyframes searchSlide { from { opacity:0; transform:translateY(-5px); } to { opacity:1; transform:translateY(0); } }
+@keyframes starBounce { 0%,100%{transform:scale(1);} 40%{transform:scale(1.55);} 70%{transform:scale(.88);} }
+@keyframes ping { 0%{transform:scale(1);opacity:.8;} 100%{transform:scale(2.4);opacity:0;} }
