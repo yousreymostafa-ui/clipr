@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "CL/PR",
+    "slug": "clipr",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#F7F9F8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F7F9F8"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
